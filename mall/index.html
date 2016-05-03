@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <link rel="shortcut icon" href="http://static.qiakr.com/favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+    <link rel="dns-prefetch" href="//static.qiakr.com/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>发布任务</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/weui.css" rel="stylesheet" type="text/css">
+    <script>
+    var _hmt = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0ae38da02c36d427b45394d1982689c8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+    (function(doc, win) {
+        // 移动端REM自适应
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth || 320;
+                var docCls = docEl.classList;
+                var width = clientWidth < 320 ? 320 : clientWidth > 640 ? 640 : clientWidth;
+                docEl.style.fontSize = 100 * (width / 320) + 'px';
+                docEl.style.opacity = 1;
+
+                // 添加屏幕标识，便于文字调整
+                if (375 <= clientWidth && clientWidth < 414) {
+                    docCls.add('view6');
+                } else if (414 <= clientWidth) {
+                    docCls.add('view6s');
+                } else {
+                    docCls.remove('view6');
+                    docCls.remove('view6s');
+                }
+            };
+        docEl.style.opacity = 0;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+        // IOS8下1px线条改为0.5px
+        if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+            var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+                version = parseInt(v[1], 10);
+            if (version >= 8) {
+                document.documentElement.classList.add('hairlines')
+            }
+        }
+    })(document, window);
+    </script>
+    <style type="text/css">
+    .create-task-frm { margin-top: 0; }
+    .flex-align-start { -webkit-align-items: flex-start; align-items: flex-start; }
+    </style>
+    <script src="http://static.qiakr.com/js/qk.mall.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cell">
+            <div class="bd">
+                <div class="weui_cells weui_cells_form create-task-frm">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">任务标题</label>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请填写任务标题">
+                        </div>
+                    </div>
+                    <div class="weui_cell weui_cells_access">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">截止时间</label>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <input class="weui_input" type="number" placeholder="请设置截止时间">
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </div>
+                    <a class="weui_cell weui_cells_access" href="javascript:;">
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <p>指派给</p>
+                        </div>
+                        <div class="weui_cell_ft"></div>
+                    </a>
+                    <div class="weui_cell flex-align-start">
+                        <div class="weui_cell_hd">
+                            <label class="weui_label">任务详情</label>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary">
+                            <textarea class="weui_textarea" placeholder="请填写任务详情描述" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_cells weui_cells_form">
+                    <div class="weui_cell weui_cell_switch">
+                        <div class="weui_cell_hd weui_cell_primary">是否需要执行者上传图片</div>
+                        <div class="weui_cell_ft">
+                            <input class="weui_switch" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
