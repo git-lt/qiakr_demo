@@ -15,23 +15,24 @@
      
     <style type="text/css">
     body {min-width: 320px; max-width: 640px; margin:0 auto;}
-    
+
     .dialog .bd, .toast .bd { padding: 10px 15px 0; }
     .bg-danger {background-color: #f44336; color:#fff;}
     .color-danger {color:#f44336;}
 
     .weui_loading_toast .weui_toast_content {margin-top: 60%;}
-
+    
+    /* mask */
     .weui_mask {opacity: 0; visibility: hidden; background: rgba(0, 0, 0, 0); -webkit-transition: background-color .3s; transition: background-color .3s; }
     .weui_mask.weui_mask_visible,.popup-overlay.weui_mask_visible {opacity: 1; visibility: visible;background-color: rgba(0,0,0,.6);}
     .weui_toast.onlytxt {min-height: 2em; padding: 8px 0 0;}
     .weui_dialog {display: none;}
     .weui_dialog.modal_in {display: block;}
     .weui_dialog.modal_out {display: none;}
-    .weui_dialog_prompt .weui_cells_form {margin-top: 0;}
 
+    /* prompt */
+    .weui_dialog_prompt .weui_cells_form {margin-top: 0;}
     .weui_dialog_prompt { top:30%; }
-    
     .weui_dialog_prompt .weui_dialog_ft {margin-top: 0;}
     .weui_dialog_prompt .weui_dialog_ft:after {border:0;}
     .weui_dialog_prompt .weui_dialog_ft a{position: relative;}
@@ -75,7 +76,6 @@
     .weui_offcanvas.right.modal_out{-webkit-transform: translate3d(100%, 0, 0); transform: translate3d(100%, 0, 0); }
 
     .weui_dialog_close {position: absolute; top:5px; right: 5px; bottom: auto; left: auto; display: block; width: 30px; height: 30px; text-align: center;}
-    
     .weui_offcanvas {padding:40px 20px;}
     </style>
 </head>
